@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Hello App Engine</title>
+  </head>
+
+  <body>
+    <h1>Hello App Engine!</h1>
+
+    <table>
+      <tr>
+        <td colspan="2" style="font-weight:bold;">Available Servlets:</td>        
+      </tr>
+      <tr>
+        <td><a href='/hey'>Welcome Message</a></td>
+      </tr>
+      <tr>
+      	<td><a href='/arrmessages'>Array Messages</a></td>
+      </tr>
+      <tr>
+      	<td><a href='/datastoremessages'>Datastore Messages</a></td>
+      </tr>
+    </table>
+    
+    <br><br>
+    
+    <h2>ArrayList Entry (Not Persistent): </h2>
+    <br>
+    
+    <form action="/arrmessages" method="post">
+    <label for="arrmessage">Array Message:</label>
+    <input type="text" name="arrmessage" id="arrmessage" placeholder="Type your message here">
+    
+    <br><br>
+    
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    </form>
+    
+    <br><br>
+    
+    <h2>Data Store Entry (Persistent): </h2>
+    <br>
+    <form action="/datastoremessages" method="post">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" placeholder="Name">
+    <br><br>
+    <label for="date">Date of Birth:</label>
+    <input type="date" name="date" id="date" placeholder="Birthday">
+    <br><br>
+    <label for="phone">Phone Number:</label>
+    <input type="number" name="phone" id="phone" placeholder="phone number">
+    <br><br>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>
