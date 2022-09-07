@@ -10,8 +10,10 @@ public class HelloAppEngineTest {
   @Test
   public void test() throws IOException {
     MockHttpServletResponse response = new MockHttpServletResponse();
-    new HelloAppEngine().doGet(null, response);
-    Assert.assertEquals("text/plain", response.getContentType());
+	MockHttpServletRequest request = new MockHttpServletRequest();
+	request.setContentType("application/json");
+	new HelloAppEngine().doGet(request, response);
+	Assert.assertEquals("application/json", request.getContentType());
     Assert.assertEquals("UTF-8", response.getCharacterEncoding());
     Assert.assertEquals("Hello App Engine!\r\n", response.getWriterContent().toString());
   }

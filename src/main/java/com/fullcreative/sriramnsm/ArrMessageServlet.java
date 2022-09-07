@@ -31,6 +31,7 @@ public class ArrMessageServlet extends HttpServlet {
 		for (String message : messages) {
 			System.out.println(message);
 			response.getWriter().println(message);
+			response.getWriter().println("Get Called");
 		}
 	}
 

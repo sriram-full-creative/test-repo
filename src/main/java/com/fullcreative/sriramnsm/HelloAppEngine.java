@@ -27,6 +27,7 @@ public class HelloAppEngine extends HttpServlet {
 
     
     response.getWriter().print("Hello App Engine!\r\n");
+    response.getWriter().print("This is a Test Servlet");
 
   }
 
